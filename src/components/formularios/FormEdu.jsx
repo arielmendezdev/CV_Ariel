@@ -24,7 +24,7 @@ export default function FormEdu() {
   return (
     <>
       <form
-        className="px-4 border-2 rounded-lg text-center mt-5 mx-auto bg-slate-200"
+        className="px-4 border-2 w-100 rounded-lg text-center mt-5 mx-auto bg-slate-200"
         onSubmit={handleSubmit}
       >
         <h1 className="my-4 text-2xl">Cargar Educacion</h1>
@@ -32,7 +32,7 @@ export default function FormEdu() {
           <div className="mb-3 col-lg-3">
             <label className="form-label">Instituto</label>
             <input
-              maxLength={50}
+              maxLength={60}
               type="text"
               className="form-control "
               onChange={(e) => setInstituto(e.target.value)}
@@ -42,7 +42,7 @@ export default function FormEdu() {
           <div className="mb-3 col-lg-3">
             <label className="form-label">Titulo Recibido</label>
             <input
-              maxLength={50}
+              maxLength={60}
               type="text"
               className="form-control"
               onChange={(e) => setTituloRecibido(e.target.value)}
@@ -51,7 +51,7 @@ export default function FormEdu() {
           <div className="mb-3 col-lg-3">
             <label className="form-label">Fecha de Ingreso</label>
             <input
-              maxLength={50}
+              maxLength={60}
               type="date"
               className="form-control"
               onChange={(e) => setFechaIngreso(e.target.value)}

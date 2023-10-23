@@ -24,7 +24,7 @@ export default function FormExp() {
   return (
     <>
       <form
-        className="px-4 border-2 rounded-lg text-center mt-5 mx-auto bg-slate-200"
+        className="px-4 border-2 w-100 rounded-lg text-center mt-5 mx-auto bg-slate-200"
         onSubmit={handleSubmit}
       >
         <h1 className="my-4 text-2xl">Cargar Experiencia Laboral</h1>
@@ -32,7 +32,7 @@ export default function FormExp() {
           <div className="mb-3 col-lg-3">
             <label className="form-label">Empresa</label>
             <input
-              maxLength={20}
+              maxLength={60}
               type="text"
               className="form-control "
               onChange={(e) => setEmpresa(e.target.value)}
@@ -42,7 +42,7 @@ export default function FormExp() {
           <div className="mb-3 col-lg-3">
             <label className="form-label">Puesto</label>
             <input
-              maxLength={20}
+              maxLength={60}
               type="text"
               className="form-control "
               onChange={(e) => setPuesto(e.target.value)}
@@ -52,7 +52,7 @@ export default function FormExp() {
           <div className="mb-3 col-lg-3">
             <label className="form-label">Fecha de Ingreso</label>
             <input
-              maxLength={20}
+              maxLength={60}
               type="date"
               className="form-control"
               onChange={(e) => setFechaInicio(e.target.value)}

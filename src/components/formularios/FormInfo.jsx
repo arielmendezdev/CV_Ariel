@@ -31,7 +31,7 @@ export default function FormInfo() {
   return (
     <>
       <form
-        className="px-4 border-2 rounded-lg text-center mt-2 mx-auto bg-slate-200"
+        className="px-4 border-2 w-100 rounded-lg text-center mt-2 mx-auto bg-slate-200"
         onSubmit={handleSubmit}
       >
         <h1 className="my-4 text-2xl">Informacion Personal</h1>
@@ -39,7 +39,7 @@ export default function FormInfo() {
           <div className="mb-3 col-lg-3">
             <label className="form-label">Nombre</label>
             <input
-              maxLength={20}
+              maxLength={60}
               type="text"
               className="form-control "
               onChange={(e) => setNombre(e.target.value)}
@@ -49,7 +49,7 @@ export default function FormInfo() {
           <div className="mb-3 col-lg-3">
             <label className="form-label">Apellido</label>
             <input
-              maxLength={20}
+              maxLength={60}
               type="text"
               className="form-control"
               onChange={(e) => setApellido(e.target.value)}
@@ -58,7 +58,7 @@ export default function FormInfo() {
           <div className="mb-3 col-lg-3">
             <label className="form-label">Telefono</label>
             <input
-              maxLength={20}
+              maxLength={60}
               type="text"
               className="form-control"
               onChange={(e) => setTelefono(e.target.value)}
@@ -87,7 +87,7 @@ export default function FormInfo() {
           <div className="mb-3 col-lg-2">
             <label className="form-label">Pais</label>
             <input
-              maxLength={20}
+              maxLength={60}
               type="text"
               className="form-control"
               id="exampleInputEmail1"

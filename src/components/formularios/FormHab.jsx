@@ -30,7 +30,7 @@ export default function FormHab() {
           <div className="mb-3 col-lg-4">
             <label className="form-label">LENGUAJES</label>
             <input
-              maxLength={20}
+              maxLength={60}
               type="text"
               className="form-control "
               onChange={(e) => setLenguajes(e.target.value)}
@@ -40,7 +40,7 @@ export default function FormHab() {
           <div className="mb-3 col-lg-4">
             <label className="form-label">FRAMEWORKS</label>
             <input
-              maxLength={20}
+              maxLength={60}
               type="text"
               className="form-control"
               onChange={(e) => setFrameWorks(e.target.value)}
@@ -49,7 +49,7 @@ export default function FormHab() {
           <div className="mb-3 col-lg-4">
             <label className="form-label">LIBRERIAS</label>
             <input
-              maxLength={20}
+              maxLength={60}
               type="text"
               className="form-control"
               onChange={(e) => setLibrerias(e.target.value)}
@@ -60,7 +60,7 @@ export default function FormHab() {
           <div className="mb-3 col-lg-6">
             <label className="form-label">IDIOMAS</label>
             <input
-              maxLength={20}
+              maxLength={60}
               type="text"
               className="form-control "
               onChange={(e) => setIdiomas(e.target.value)}

@@ -7,12 +7,9 @@ export default function FormColor() {
 
   return (
     <>
-      <form
-        className="p-2 bg-slate-200 border-2 rounded-lg text-center mt-5 w-100 mx-auto"
-        
-      >
-        <h1 className="mb-3 text-2xl">Elegi los colores de tu CV</h1>
-        <div className="row mb-4 border rounded p-2 bg-slate-100 w-75 mx-auto text-center">
+      <form className="px-4 border-2 rounded-lg text-center mt-5 mx-auto w-100 bg-slate-200">
+        <h1 className="my-3 text-2xl">Elegi los colores del CV</h1>
+        <div className="row mb-4 border rounded p-2 bg-slate-100 ">
           <div className="col-lg-3 flex justify-center items-center gap-2">
             <label htmlFor="">Columna</label>
             <input
