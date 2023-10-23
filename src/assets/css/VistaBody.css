@@ -1,0 +1,68 @@
+/* PDF BODY */
+.crear-pdf-body {
+    padding: 5px 15px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.crear-titulo-general {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+    font-weight: 800;
+    margin-top: 10px;
+
+}
+.crear-linea {
+    height: 0.5px;
+}
+
+/* PERFIL */
+/* .crear-titulo-perfil {
+    font-size: 10px;
+} */
+.crear-texto-perfil {
+    font-size: 15px;
+    word-wrap: break-word;
+}
+
+.crear-body-perfil {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* EDUCACION */
+/* .crear-body-educacion{
+    
+} */
+
+.crear-educ-instituto, 
+.crear-exp-puesto {
+    font-size: 20px;
+    margin-top: 2px;
+}
+
+.crear-educ-titulo {
+    font-size: 18px;
+    margin-top: 4px;
+    font-weight: bold;
+}
+
+.crear-educ-fecha,
+.crear-exp-fecha {
+    font-size: 20px;
+}
+
+.crear-educ-descripcion,
+.crear-exp-descripcion {
+    font-size: 15px;
+    margin: 10px 0;
+}
+
+/* EXPERIENCIA */
+
+.crear-exp-puesto {
+    font-weight: 500;
+}

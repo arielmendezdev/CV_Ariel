@@ -1,0 +1,84 @@
+.crear-vista-general {
+    width: 840px;
+    height: 1188px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 50px auto 10px;
+}
+.crear-vista-columna {
+    width: 300px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.crear-vista-imagen {
+    margin: 50px auto;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    z-index: 1;
+}
+.crear-vista-btn-eliminar {
+    position: absolute;
+    left: 130px;
+    top: 170px;
+    z-index: 10;
+    font-weight: bold;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.8;
+}
+.crear-img-btn-eliminar {
+    width: 30px;
+    padding: 3px;
+    z-index: 20;
+}
+.crear-imagen-foto {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* INFORMACION */
+.crear-div-informacion,
+.crear-div-habilidades,
+.crear-div-idiomas {
+    margin: 25px;
+}
+.crear-pdf-container-nombre,
+.crear-habilidades,
+.crear-idiomas {
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.crear-pdf-container-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 5px;
+}
+.crear-pdf-text-info {
+    max-width: 90%;
+    font-size: 20px;
+    word-wrap: break-word;
+}
+
+/* HABILIDADES */
+.crear-titulo-habilidades,
+.crear-titulo-idiomas {
+    margin-left: 10px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.crear-cada-habilidades {
+    font-size: 18px;
+}
+.crear-info-habilidades {
+    display: flex;
+    gap: 5px;
+    margin: 5px 20px;
+    flex-wrap: wrap;
+}
+

@@ -1,0 +1,128 @@
+/* PRESENTACION GENERAL */
+.pdf-container {
+    transform: scale(2.5);
+    display: flex;
+    z-index: -1;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-shadow: -5px 5px 5px #444;
+}
+.pdf-cuerpo-general {
+    width: 210px;
+    height: 297px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* PDF COLUMNA */
+.pdf-columna {
+    width: 70px;
+}
+.pdf-imagen {
+    display: flex;
+    margin: 10px auto;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* INFORMACION */
+.div-informacion,
+.div-habilidades {
+    margin: 5px 5px 0;
+}
+.pdf-container-nombre,
+.habilidades {
+    font-size: 7px;
+    margin-bottom: 2px;
+}
+.pdf-container-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 2px;
+}
+.pdf-text-info {
+    max-width: 100%;
+    font-size: 5px;
+    word-wrap: break-word;
+}
+
+/* HABILIDADES */
+ .titulo-habilidades {
+    margin-left: 2px;
+    font-size: 5px;
+    font-weight: bold;
+}
+.cada-habilidades {
+    font-size: 3.5px;
+    margin: 1px 5px;
+}
+
+
+/* PDF BODY */
+.pdf-body {
+    padding: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.titulo-general {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 5px;
+    font-weight: 800;
+    margin-bottom: 3px;
+}
+.linea {
+    height: 0.1px;
+    margin: 5px 0 0;
+    opacity: 0.3;
+    width: 100%;
+    
+}
+
+/* PERFIL */
+.texto-perfil {
+    font-size: 4px;
+    word-wrap: break-word;
+}
+
+
+/* EDUCACION Y EXPERIENCIA */
+.educ-instituto {
+    font-size: 4px;
+    margin-top: 2px;
+}
+
+.educ-titulo,
+.exp-puesto {
+    font-size: 4px;
+    margin-top: 2px;
+    font-weight: bold;
+}
+
+.educ-fecha,
+.exp-fecha {
+    font-size: 4px;
+}
+
+.educ-descripcion,
+.exp-descripcion {
+    font-size: 4px;
+    margin: 2px 0;
+}
+
+.div-pdf-flotante {
+    position: fixed;
+    margin: 230px 1100px;
+    z-index: 10;
+}
+.btn-pdf {
+    position: absolute;
+    width: 130px;
+    top: 460px;
+    left: 400px;
+
+}
