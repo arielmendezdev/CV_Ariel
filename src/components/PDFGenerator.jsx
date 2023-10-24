@@ -3,12 +3,12 @@ import jsPDF from "jspdf";
 import InfoColumna from "./subcomps/InfoColumna";
 import InfoBody from "./subcomps/InfoBody";
 import "../assets/css/PDFGenerator.css";
-import eliminar from "../assets/img/eliminar.png";
+
 import { useContext } from "react";
 import { contexto } from "../context/contextForm";
 
 export default function PdfGenerator() {
-  const { imagen, setImagen, setBtneliminar } = useContext(contexto);
+  const { setBtneliminar } = useContext(contexto);
   const contentRef = useRef(null);
 
   const generatePdf = () => {
@@ -30,17 +30,6 @@ export default function PdfGenerator() {
 
   return (
     <>
-      {imagen ? (
-        <button
-          className="crear-vista-btn-eliminar"
-          onClick={() => {
-            setImagen(null);
-          }}
-        >
-          <img src={eliminar} alt="" className="crear-img-btn-eliminar" />
-        </button>
-      ) : null}
-
       <div className="flex flex-col pdf-general">
         <div className="div-pdf">
           <div ref={contentRef}>

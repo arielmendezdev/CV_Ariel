@@ -1,9 +1,17 @@
 import { useContext } from "react";
 import { contexto } from "../../context/contextForm";
+import eliminar from "../../assets/img/eliminar.png";
 
 export default function InfoColumna() {
-  const { informacion, habilidades, colorColumna, textoColumna, imagen } =
-    useContext(contexto);
+  const {
+    informacion,
+    habilidades,
+    colorColumna,
+    textoColumna,
+    imagen,
+    setImagen,
+    btneliminar,
+  } = useContext(contexto);
 
   return (
     <>
@@ -15,7 +23,30 @@ export default function InfoColumna() {
         }}
       >
         <div className="div-imagen">
-          {imagen ? <img src={imagen} alt="" className="pdf-imagen" /> : null}
+          {imagen ? (
+            <div>
+              <button
+                className={btneliminar}
+                style={{
+                  position: "absolute",
+                  width: "12px",
+                  height: "12px",
+                  top: "60px",
+                  left: "40px",
+                  fontWeight: "bold",
+                  borderRadius: "50%",
+                  backgroundColor: "#fff",
+                  opacity: "0.7",
+                }}
+                onClick={() => {
+                  setImagen(null);
+                }}
+              >
+                <img src={eliminar} alt="" className="crear-img-btn-eliminar" />
+              </button>
+              <img src={imagen} alt="" className="pdf-imagen" />
+            </div>
+          ) : null}
         </div>
 
         <div className="div-informacion">

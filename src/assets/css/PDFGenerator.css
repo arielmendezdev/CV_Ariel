@@ -34,6 +34,7 @@
     height: 297px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    
 }
 
 .btn-pdf {
@@ -43,14 +44,13 @@
     margin: 100px;
 }
 
-
-
 /* PDF COLUMNA */
-.crear-vista-btn-eliminar {
+.btn-eliminar-imagen {
     position: absolute;
-    top: -70px;
-    left: -50px;
-    z-index: 10;
+    width: 12px;
+    height: 12px;
+    top: 60px;
+    left: 40px;
     font-weight: bold;
     border-radius: 50%;
     background-color: #fff;
@@ -58,8 +58,8 @@
 }
 
 .crear-img-btn-eliminar {
-    width: 28px;
-    padding: 3px;
+    width: 12px;
+    padding: 2px;
     z-index: 20;
 }
 
