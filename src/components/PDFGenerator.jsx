@@ -8,12 +8,11 @@ import { useContext } from "react";
 import { contexto } from "../context/contextForm";
 
 export default function PdfGenerator() {
-
   const { imagen, setImagen, setBtneliminar } = useContext(contexto);
   const contentRef = useRef(null);
 
   const generatePdf = () => {
-    setBtneliminar('hidden')
+    setBtneliminar("hidden");
     const doc = new jsPDF({
       orientation: "vertical",
       unit: "mm",
@@ -30,7 +29,7 @@ export default function PdfGenerator() {
   };
 
   return (
-    <div className="flex flex-col">
+    <>
       {imagen ? (
         <button
           className="crear-vista-btn-eliminar"
@@ -41,17 +40,20 @@ export default function PdfGenerator() {
           <img src={eliminar} alt="" className="crear-img-btn-eliminar" />
         </button>
       ) : null}
-      <div className="pdf-container">
-        <div ref={contentRef}>
-          <div className="pdf-cuerpo-general">
-            <InfoColumna />
-            <InfoBody />
+
+      <div className="flex flex-col pdf-general">
+        <div className="div-pdf">
+          <div ref={contentRef}>
+            <div className="pdf-cuerpo-general">
+              <InfoColumna />
+              <InfoBody />
+            </div>
           </div>
         </div>
+        <button className="btn-pdf btn btn-danger" onClick={generatePdf}>
+          Generar PDF
+        </button>
       </div>
-      <button className="btn-pdf  btn btn-danger" onClick={generatePdf}>
-        Generar PDF
-      </button>
-    </div>
+    </>
   );
 }

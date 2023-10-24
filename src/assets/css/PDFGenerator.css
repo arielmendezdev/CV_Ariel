@@ -1,17 +1,50 @@
-/* PRESENTACION GENERAL */
-.pdf-container {
-    transform: scale(2.5);
+.div-crearcv {
     display: flex;
-    z-index: -1;
+}
+
+
+/* PRESENTACION GENERAL */
+.div-forms {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 20px;
+}
+
+.div-generador {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.pdf-general {
+    position: sticky;
+    top: 150px;
+    height: 650px;
+}
+
+.div-pdf {
+    transform: scale(230%);
+    margin: 120px auto;
+}
+
+.pdf-cuerpo-general {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     box-shadow: -5px 5px 5px #444;
-}
-.pdf-cuerpo-general {
     width: 210px;
     height: 297px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
+
+.btn-pdf {
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+    margin: 100px;
+}
+
+
 
 /* PDF COLUMNA */
 .crear-vista-btn-eliminar {
@@ -24,19 +57,21 @@
     background-color: #fff;
     opacity: 0.7;
 }
+
 .crear-img-btn-eliminar {
     width: 28px;
     padding: 3px;
     z-index: 20;
 }
+
 .btn-eliminar {
     font-size: 5px;
-    color: rgb(204, 86, 86);
 }
 
 .pdf-columna {
     width: 70px;
 }
+
 .pdf-imagen {
     display: flex;
     margin: 10px auto;
@@ -51,11 +86,13 @@
 .div-habilidades {
     margin: 5px 5px 0;
 }
+
 .pdf-container-nombre,
 .habilidades {
     font-size: 7px;
     margin-bottom: 2px;
 }
+
 .pdf-container-info {
     display: flex;
     justify-content: center;
@@ -63,6 +100,7 @@
     flex-wrap: wrap;
     margin-left: 2px;
 }
+
 .pdf-text-info {
     max-width: 100%;
     font-size: 5px;
@@ -70,11 +108,12 @@
 }
 
 /* HABILIDADES */
- .titulo-habilidades {
+.titulo-habilidades {
     margin-left: 2px;
     font-size: 5px;
     font-weight: bold;
 }
+
 .cada-habilidades {
     font-size: 3.5px;
     margin: 2px 5px;
@@ -89,19 +128,30 @@
     flex-direction: column;
     position: relative;
 }
+
 .titulo-general {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 5px;
     font-weight: 800;
     margin-bottom: 3px;
 }
+
 .linea {
     height: 0.1px;
     margin: 5px 0 0;
     opacity: 0.3;
     width: 100%;
-    
+
 }
+
+/* COLORES */
+.colores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
 
 /* PERFIL */
 .texto-perfil {
@@ -134,16 +184,42 @@
     margin: 2px 0;
 }
 
-.div-pdf-flotante {
-    position: fixed;
-    
-    margin: 230px 65%;
-    z-index: 10;
+@media (max-width: 1200px) {
+    .colores {
+        justify-content: space-between;
+        padding: 0 40px;
+    }
 }
-.btn-pdf {
-    position: absolute;
-    width: 130px;
-    top: 460px;
-    left: 400px;
 
+
+@media (max-width: 960px){
+    .div-crearcv {
+        flex-wrap: wrap;
+        gap: 100px;
+    }
+
+    .div-forms {
+        width: 100%;
+        margin: 0 20px;
+    }
+
+    .div-generador {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .div-pdf {
+        transform: scale(150%);
+        margin: 0px auto;
+    }
+
+    .footer {
+        margin: -180px 0;
+    }
+
+    .colores {
+        justify-content: space-between;
+        padding: 0 40px;
+    }
 }

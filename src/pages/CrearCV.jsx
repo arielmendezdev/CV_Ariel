@@ -9,8 +9,8 @@ import PDFGenerator from "../components/PDFGenerator";
 export default function CrearCV() {
   return (
     <>
-      <div className="flex w-50">
-        <div className="flex flex-col mx-4">
+      <div className="div-crearcv">
+        <div className="div-forms">
           <FormInfo />
           <FormHab />
           <FormPerfil />
@@ -18,8 +18,7 @@ export default function CrearCV() {
           <FormExp />
           <FormColor />
         </div>
-
-        <div className="div-pdf-flotante">
+        <div className="div-generador">
           <PDFGenerator />
         </div>
       </div>
