@@ -2,7 +2,6 @@
     display: flex;
 }
 
-
 /* PRESENTACION GENERAL */
 .div-forms {
     display: flex;
@@ -192,7 +191,7 @@
 }
 
 
-@media (max-width: 960px){
+@media (max-width: 960px) {
     .div-crearcv {
         flex-wrap: wrap;
         gap: 100px;
@@ -214,12 +213,11 @@
         margin: 0px auto;
     }
 
-    .footer {
-        margin: -180px 0;
-    }
-
     .colores {
         justify-content: space-between;
         padding: 0 40px;
+    }
+    body {
+        padding-bottom: 0;
     }
 }
