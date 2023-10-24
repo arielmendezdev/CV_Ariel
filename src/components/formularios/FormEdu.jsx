@@ -27,7 +27,7 @@ export default function FormEdu() {
           <div className="mb-3 col-lg-3">
             <label className="form-label">Instituto</label>
             <input
-              maxLength={60}
+              maxLength={30}
               type="text"
               className="form-control "
               onChange={(e) => setInstituto(e.target.value)}
@@ -37,7 +37,7 @@ export default function FormEdu() {
           <div className="mb-3 col-lg-3">
             <label className="form-label">Titulo Recibido</label>
             <input
-              maxLength={60}
+              maxLength={30}
               type="text"
               className="form-control"
               onChange={(e) => setTituloRecibido(e.target.value)}
@@ -46,7 +46,6 @@ export default function FormEdu() {
           <div className="mb-3 col-lg-3">
             <label className="form-label">Fecha de Ingreso</label>
             <input
-              maxLength={60}
               type="date"
               className="form-control"
               onChange={(e) => setFechaIngreso(e.target.value)}
