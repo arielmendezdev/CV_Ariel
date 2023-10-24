@@ -21,6 +21,8 @@ export default function StateContextForm({ children }) {
     setTextoBody(e.target.value);
   };
 
+  const [btneliminar, setBtneliminar] = useState()
+
   const cargarImagen = (e) => {
     const newImagen = e.currentTarget.files[0];
     const urlImage = URL.createObjectURL(newImagen);
@@ -28,32 +30,24 @@ export default function StateContextForm({ children }) {
   };
 
   const [informacion, setInformacion] = useState([{}])
-  const agregarInfo = ({
-    nombre,
-    apellido,
-    telefono,
-    cpostal,
-    pais,
-    localidad,
-    email,
-    provincia,
-    imagen,
-  }) => {
+
+  const agregarInfo = (info ) => {
+
     setInformacion([
       {
-        nombre,
-        apellido,
-        telefono,
-        cpostal,
-        pais,
-        localidad,
-        email,
-        provincia,
-        imagen,
+        nombre: info.nombre,
+        apellido: info.apellido,
+        telefono: info.telefono,
+        cpostal: info.cpostal,
+        pais: info.pais,
+        localidad: info.localidad,
+        email: info.email,
+        provincia: info.provincia,
+        imagen: info.imagen
       }
     ])
   };
-
+  
   const [perfil, setPerfil] = useState([])
   const agregarPerfil = ({ descripcion}) => {
     setPerfil([{ descripcion }])
@@ -65,24 +59,46 @@ export default function StateContextForm({ children }) {
   }
 
   const [educacion, setEducacion] = useState([])
-  const agregarEdu = ({ instituto, tituloRecibido, fechaIngreso, fechaEgreso, descripcion}) => {
-    setEducacion([{
-      instituto, tituloRecibido, fechaIngreso, fechaEgreso, descripcion
-    }])
+  const agregarEdu = (infoEdu) => {
+    const newEdu = 
+      {
+        id: educacion.length,
+        instituto: infoEdu.instituto,
+        tituloRecibido: infoEdu.tituloRecibido,
+        fechaIngreso: infoEdu.fechaIngreso,
+        fechaEgreso: infoEdu.fechaEgreso,
+        descripcion: infoEdu.descripcion,
+      }
+    if (educacion.length < 3) {
+      setEducacion([...educacion, newEdu])
+    }
   }
-  const eliminarEdu = () => {
-    setEducacion(null)
+  
+  const eliminarEdu = (i) => {
+    const update = educacion.filter(info => info.id !== i.id)
+    setEducacion(update)
   };
 
 
   const [experiencia, setExperiencia] = useState([])
-  const agregarExp = ({ empresa, puesto, fechaInicio, fechaSalida, descripcion}) => {
-    setExperiencia([{
-      empresa, puesto, fechaInicio, fechaSalida, descripcion
-    }])
+  const agregarExp = (infoExp) => {
+
+    const newExp = {
+      id: experiencia.length,
+      empresa: infoExp.empresa,
+      puesto: infoExp.puesto,
+      fechaInicio: infoExp.fechaInicio,
+      fechaSalida: infoExp.fechaSalida,
+      descripcion: infoExp.descripcion,
+    };
+
+    if (experiencia.length < 3) {
+      setExperiencia([...experiencia, newExp])
+    }
   }
-  const eliminarExp = () => {
-    setExperiencia(null)
+  const eliminarExp = (i) => {
+    const update = experiencia.filter(info => info.id !== i.id)
+    setExperiencia(update)
   };
 
   return (
@@ -112,6 +128,8 @@ export default function StateContextForm({ children }) {
           cargarImagen,
           imagen,
           setImagen,
+          btneliminar,
+          setBtneliminar
         }}
       >
         {children}

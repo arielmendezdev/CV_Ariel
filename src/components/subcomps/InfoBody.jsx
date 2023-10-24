@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { contexto } from "../../context/contextForm";
 
 export default function InfoBody() {
-  const { colorBody, textoBody, perfil, educacion, experiencia } =
+  const { colorBody, textoBody, perfil, educacion, experiencia, eliminarEdu, eliminarExp, btneliminar } =
     useContext(contexto);
 
   return (
@@ -43,8 +43,13 @@ export default function InfoBody() {
                         </h1>
                       </div>
                     </div>
-                    <h1 className="educ-titulo">» {educ.tituloRecibido}</h1>
-                    <h1 className="educ-descripcion">{educ.descripcion}</h1>
+                    <div className="flex justify-between">
+                      <h1 className="educ-titulo">» {educ.tituloRecibido}</h1>
+                      <div className="btn-eliminar">
+                        <button className={btneliminar} onClick={() => eliminarEdu(educ)}>eliminar</button>
+                      </div>
+                    </div>
+                      <h1 className="educ-descripcion">{educ.descripcion}</h1>
                   </div>
                 );
               })
@@ -72,12 +77,17 @@ export default function InfoBody() {
             ? experiencia.map((exp, i) => {
                 return (
                   <div key={i} className="body-experiencia">
-                    <div className="flex justify-between align-items-end">
+                    <div className="flex justify-between align-items-center">
                       <h1 className="exp-puesto">» {exp.puesto}</h1>
                       <div>
                         <h1 className="exp-fecha">
                           {exp.fechaInicio} / {exp.fechaSalida}
                         </h1>
+                      </div>
+                      <div className="btn-eliminar">
+                        <button className={btneliminar} onClick={() => eliminarExp(exp)}>
+                          eliminar
+                        </button>
                       </div>
                     </div>
                     <h1 className="exp-descripcion">{exp.descripcion}</h1>

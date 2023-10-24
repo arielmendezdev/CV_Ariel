@@ -10,15 +10,10 @@ export default function FormExp() {
   const [fechaSalida, setFechaSalida] = useState("");
   const [descripcion, setDescripcion] = useState("");
 
+  const infoExp = { empresa, puesto, fechaInicio, fechaSalida, descripcion };
   const handleSubmit = (e) => {
     e.preventDefault();
-    agregarExp({
-      empresa,
-      puesto,
-      fechaInicio,
-      fechaSalida,
-      descripcion,
-    });
+    agregarExp(infoExp);
   };
 
   return (
@@ -72,6 +67,7 @@ export default function FormExp() {
           <div className="mb-3 col-lg-12">
             <label className="form-label">Descripcion</label>
             <textarea
+              maxLength={200}
               type="text"
               className="form-control"
               id="exampleInputEmail1"

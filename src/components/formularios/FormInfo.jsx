@@ -13,19 +13,11 @@ export default function FormInfo() {
   const [provincia, setProvincia] = useState("");
   const [localidad, setLocalidad] = useState("");
 
+  const info = {nombre, apellido, telefono, cpostal, pais, email, provincia, localidad, imagen: null}
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    agregarInfo({
-      nombre,
-      apellido,
-      telefono,
-      cpostal,
-      pais,
-      localidad,
-      email,
-      provincia,
-      imagen: null,
-    });
+    agregarInfo( info );
   };
 
   return (

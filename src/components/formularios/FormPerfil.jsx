@@ -25,7 +25,7 @@ export default function FormPerfil() {
           <div className="mb-3 col-lg-12">
             <label className="form-label">Perfil</label>
             <textarea
-              maxLength={2000}
+              maxLength={700}
               type="text"
               className="form-control "
               onChange={(e) => setDescripcion(e.target.value)}

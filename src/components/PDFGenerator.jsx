@@ -9,10 +9,11 @@ import { contexto } from "../context/contextForm";
 
 export default function PdfGenerator() {
 
-  const { imagen, setImagen } = useContext(contexto);
+  const { imagen, setImagen, setBtneliminar } = useContext(contexto);
   const contentRef = useRef(null);
 
   const generatePdf = () => {
+    setBtneliminar('hidden')
     const doc = new jsPDF({
       orientation: "vertical",
       unit: "mm",
@@ -23,6 +24,7 @@ export default function PdfGenerator() {
       callback: function (pdf) {
         doc.deletePage(2);
         pdf.save("documento.pdf");
+        setBtneliminar();
       },
     });
   };

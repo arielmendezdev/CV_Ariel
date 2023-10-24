@@ -9,16 +9,11 @@ export default function FormEdu() {
   const [fechaIngreso, setFechaIngreso] = useState("");
   const [fechaEgreso, setFechaEgreso] = useState("");
   const [descripcion, setDescripcion] = useState("");
-  
+
+  const infoEdu = { instituto, tituloRecibido, fechaIngreso, fechaEgreso,descripcion,};
   const handleSubmit = (e) => {
     e.preventDefault();
-    agregarEdu({
-      instituto,
-      tituloRecibido,
-      fechaIngreso,
-      fechaEgreso,
-      descripcion
-    });
+    agregarEdu(infoEdu);
   };
 
   return (
@@ -71,6 +66,7 @@ export default function FormEdu() {
           <div className="mb-3 col-lg-12">
             <label className="form-label">Descripcion</label>
             <textarea
+              maxLength={200}
               type="text"
               className="form-control"
               id="exampleInputEmail1"
