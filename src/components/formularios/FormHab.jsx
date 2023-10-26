@@ -34,7 +34,6 @@ export default function FormHab() {
               type="text"
               className="form-control "
               onChange={(e) => setLenguajes(e.target.value)}
-              autoFocus
             />
           </div>
           <div className="mb-3 col-lg-4">
@@ -64,7 +63,6 @@ export default function FormHab() {
               type="text"
               className="form-control "
               onChange={(e) => setIdiomas(e.target.value)}
-              autoFocus
             />
           </div>
         </div>

@@ -31,7 +31,6 @@ export default function FormEdu() {
               type="text"
               className="form-control "
               onChange={(e) => setInstituto(e.target.value)}
-              autoFocus
             />
           </div>
           <div className="mb-3 col-lg-3">

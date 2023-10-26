@@ -29,7 +29,6 @@ export default function FormPerfil() {
               type="text"
               className="form-control "
               onChange={(e) => setDescripcion(e.target.value)}
-              autoFocus
             />
           </div>
         </div>

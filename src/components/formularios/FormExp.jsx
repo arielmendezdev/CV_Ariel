@@ -31,7 +31,6 @@ export default function FormExp() {
               type="text"
               className="form-control "
               onChange={(e) => setEmpresa(e.target.value)}
-              autoFocus
             />
           </div>
           <div className="mb-3 col-lg-3">
@@ -41,7 +40,6 @@ export default function FormExp() {
               type="text"
               className="form-control "
               onChange={(e) => setPuesto(e.target.value)}
-              autoFocus
             />
           </div>
           <div className="mb-3 col-lg-3">
