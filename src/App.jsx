@@ -13,7 +13,7 @@ export default function App() {
 
   useEffect(() => {
     setTimeout(() => {
-      setInicio(false)}, 500)
+      setInicio(false)}, 1000)
   }, []);
 
   return (
